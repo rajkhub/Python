@@ -1,0 +1,27 @@
+#####   Reading a CSV File in Pyhton     ############### 
+#Albuquerque,749
+#Anaheim,371
+#Anchorage,828
+
+f = open('crime_rates.csv', 'r')
+data = f.read()
+rows = data.split('\n')
+print(rows[0:5])
+
+#Creating an Array and appending Crimes
+int_crime_rates = []
+
+for i in rows:
+    sp = i.split(",")
+    ints = int(sp[1])    
+    int_crime_rates.append(ints)
+    
+    
+#### Highest in an Array
+print(crime_rates)
+
+highest = crime_rates[0] 
+
+for i in crime_rates:
+    if i > highest:
+         highest = i
