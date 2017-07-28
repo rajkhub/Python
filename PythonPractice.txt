@@ -1,3 +1,11 @@
+####################
+cities = ["Albuquerque", "Anaheim", "Anchorage", "Arlington", "Atlanta"]
+cities_slice = cities[2:5]
+##O/p##
+cities_slicelist (<class 'list'>)
+['Anchorage', 'Arlington', 'Atlanta']
+
+
 #####   Reading a CSV File in Pyhton     ############### 
 #Albuquerque,749
 #Anaheim,371
@@ -25,3 +33,5 @@ highest = crime_rates[0]
 for i in crime_rates:
     if i > highest:
          highest = i
+         
+         
