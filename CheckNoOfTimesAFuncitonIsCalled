@@ -1,0 +1,23 @@
+
+def validRequestRate():
+    validRequestRate.counter += 1
+    if validRequestRate.counter <= 3:
+        return True
+    else:
+        validRequestRate.counter = 0
+        return False
+validRequestRate.counter = 0
+
+# =================
+# ==== Testing ====
+# =================
+
+# This calls validRequestRate 4 times, waits for 1 second, and then calls it
+# again. This should result in 3 `True`s, 1 `False`, and then 1 more `True`
+# being printed.
+print(validRequestRate()) # True
+print(validRequestRate()) # True
+print(validRequestRate()) # True
+print(validRequestRate()) # False
+time.sleep(1)
+print(validRequestRate()) # True
